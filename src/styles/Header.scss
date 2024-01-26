@@ -1,0 +1,17 @@
+// src/styles/Header.scss
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #3498db;
+  color: #fff;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    font-style: italic;
+    margin-top: 5px;
+  }
+}
