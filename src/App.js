@@ -1,15 +1,17 @@
 // App.js
 import React from 'react';
-import Header from './components/Header.js';
-import Body from './components/Body.js';
+import MainImage from '../src/components/MainImage.js';
+import MainButton from '../src/components/MainButton.js';
+import AdditionalButtons from '../src/components/AdditionalButtons.js';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <Header />
-      <Body />
+    <div className="app">
+      <MainImage />
+      <MainButton />
+      <AdditionalButtons />
     </div>
   );
-};
+}
 
 export default App;
