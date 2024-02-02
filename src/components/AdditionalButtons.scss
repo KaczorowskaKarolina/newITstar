@@ -1,0 +1,29 @@
+// AdditionalButtons.scss
+
+.additional-buttons {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .additional-buttons-container {
+        display: flex;
+        margin-top: 10px;
+    }
+}
+
+.additional-button-container {
+    margin: 0 5px;
+}
+
+.additional-button {
+    border: none;
+    background-color: #f5f5fa;
+    cursor: pointer;
+}

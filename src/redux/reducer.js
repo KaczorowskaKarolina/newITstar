@@ -1,19 +1,22 @@
-// redux/reducer.js
+// reducer.js
 
 const initialState = {
   showButtons: false,
+  // inne stany...
 };
 
-const reducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SHOW_BUTTONS':
+    case 'TOGGLE_BUTTONS':
+      console.log('currentState:', state); // Dodano console.log
       return {
         ...state,
-        showButtons: true,
+        showButtons: !state.showButtons,
       };
+    // inne przypadki...
     default:
       return state;
   }
 };
 
-export default reducer;
+export default rootReducer;

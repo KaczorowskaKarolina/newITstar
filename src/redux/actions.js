@@ -1,5 +1,7 @@
-// redux/actions.js
+// actions.js
 
-export const showButtons = () => ({
-  type: 'SHOW_BUTTONS',
-});
+export const toggleButtons = () => {
+  return {
+    type: 'TOGGLE_BUTTONS',
+  };
+};
