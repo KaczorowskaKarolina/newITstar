@@ -1,29 +1,94 @@
 // AdditionalButtons.scss
-
 .additional-buttons {
-    display: flex;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-
-    &.visible {
-        opacity: 1;
-        visibility: visible;
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
-    .additional-buttons-container {
-        display: flex;
-        margin-top: 10px;
+    &-button {
+        width: 300px;
+            font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+            font-size: 1.5rem;
+            border: none;
+            color: #2a1f62;
+            background: #f5f5fa;
+            font-size: 3rem;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+
+        &-resume {
+            // Dodatkowe style dla przycisku RESUME
+            width: 300px;
+                font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+                font-size: 1.5rem;
+                border: none;
+                color: #2a1f62;
+                background: #f5f5fa;
+                font-size: 3rem;
+                margin: 0;
+                padding: 0;
+                transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #45a049;
+            }
+        }
+
+        &-about {
+            // Dodatkowe style dla przycisku About ME
+            background-color: #2196f3;
+            color: white;
+
+            &:hover {
+                background-color: #0d47a1;
+            }
+        }
+
+        // Dodaj style dla innych przycisków według potrzeb
+        // ...
+
+        // Styl dla kontenera przycisków, jeśli jesteś zainteresowany
+        // &-container {
+        //     // Dodatkowe style dla kontenera
+        // }
     }
-}
 
-.additional-button-container {
-    margin: 0 5px;
-}
+    // Zastosuj ogólne style zdefiniowane w MainButton
+    .main-button &-button {
+        background: #f5f5fa;
+        color: #2a1f62;
 
-.additional-button {
-    border: none;
-    background-color: #f5f5fa;
-    cursor: pointer;
+        &:hover {
+            background-color: #f8f8ff;
+        }
+
+        &-resume {
+            background-color: #4caf50;
+        }
+
+        &-about {
+            background-color: #2196f3;
+        }
+
+        // Dodaj style dla innych przycisków według potrzeb
+        // ...
+    }
+
+    // Styl dla przycisku RESUME o id:5
+    .additional-buttons-resume {
+        background-color: #f5f5fa;
+        color: #2a1f62;
+
+        &:hover {
+            background-color: #f8f8ff;
+        }
+    }
 }

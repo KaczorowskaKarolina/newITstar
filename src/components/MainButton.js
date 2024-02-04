@@ -1,5 +1,6 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+// MainButton.js
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { toggleButtons } from '../redux/actions.js';
 import AdditionalButtons from './AdditionalButtons.js';
 
@@ -7,10 +8,12 @@ import './MainButton.scss';
 
 function MainButton() {
   const dispatch = useDispatch();
-  const showButtons = useSelector(state => state.showButtons);
+
+  const [resumeClicked, setResumeClicked] = useState(false);
 
   const handleButtonClick = () => {
     console.log('Button clicked');
+    setResumeClicked(!resumeClicked);
     dispatch(toggleButtons());
   };
 
@@ -18,10 +21,13 @@ function MainButton() {
 
   return (
     <div className="main-button">
-      <button className="button" onClick={handleButtonClick}>
-        RESUME
-      </button>
-      {showButtons && <AdditionalButtons />}
+      {resumeClicked ? (
+        <AdditionalButtons onButtonClick={() => setResumeClicked(false)} />
+      ) : (
+        <button className="button" onClick={handleButtonClick}>
+          RESUME
+        </button>
+      )}
     </div>
   );
 }

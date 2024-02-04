@@ -2,6 +2,7 @@
 
 .main-button {
     position: relative;
+    display: inline-block;
 
     button {
         width: 300px;
@@ -21,25 +22,6 @@
     }
 
     &.visible button {
-        width: 150px; // zmniejsz szerokość po kliknięciu
-    }
-
-    &:hover {
-        background: #f8f8ff;
-        box-shadow: -20px -20px 40px 0 #fff, 20px 20px 40px 0 #1d0dca17;
-    }
-}
-
-.additional-buttons {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 10px;
-
-    .additional-button-container {
-        margin: 0 5px;
+        width: 150px; 
     }
 }
