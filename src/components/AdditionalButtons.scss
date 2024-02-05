@@ -9,7 +9,7 @@
     }
 
     &-button {
-        width: 300px;
+        width: 500px;
         font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
         font-size: 1.5rem;
         border: none;
@@ -25,7 +25,8 @@
 
         &-resume {
             // Dodatkowe style dla przycisku RESUME
-            width: 300px;
+            width: 500px;
+            height: 200px;
             font-size: 3rem;
 
             &:hover {
@@ -74,12 +75,58 @@
     }
 
     // Styl dla przycisku RESUME o id:5
-    .additional-buttons-resume {
-        background-color: #f5f5fa;
-        color: #2a1f62;
+    // .additional-buttons-resume {
+    //     background-color: #f5f5fa;
+    //     color: #2a1f62;
 
-        &:hover {
-            background-color: #f8f8ff;
-        }
+    //     &:hover {
+    //         background-color: #f8f8ff;
+    //     }
+    // }
+}
+
+// Dodaj poniższe style do pliku AdditionalButtons.scss
+
+.education-modal {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    h2 {
+        color: #2a1f62;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
     }
+
+    // Dodaj styl dla informacji o edukacji, np. listy
+
+    // .education-info {
+    //     list-style: none;
+    //     padding: 0;
+    //     margin: 0;
+
+    //     li {
+    //         margin-bottom: 10px;
+    //         font-size: 1.2rem;
+    //         color: #333;
+    //     }
+    // }
+
+    // .back-button {
+    //     background-color: #2a1f62;
+    //     color: #fff;
+    //     border: none;
+    //     padding: 10px 20px;
+    //     font-size: 1.5rem;
+    //     cursor: pointer;
+    //     margin-top: 20px;
+
+    //     &:hover {
+    //         background-color: #1a103a;
+    //     }
+    // }
 }
