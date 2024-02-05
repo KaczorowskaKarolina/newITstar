@@ -10,15 +10,14 @@
 
     &-button {
         width: 300px;
-            font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-            font-size: 1.5rem;
-            border: none;
-            color: #2a1f62;
-            background: #f5f5fa;
-            font-size: 3rem;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s ease;
+        font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        font-size: 1.5rem;
+        border: none;
+        color: #2a1f62;
+        background: #f5f5fa;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s ease;
 
         &:hover {
             background-color: #f0f0f0;
@@ -27,15 +26,7 @@
         &-resume {
             // Dodatkowe style dla przycisku RESUME
             width: 300px;
-                font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-                font-size: 1.5rem;
-                border: none;
-                color: #2a1f62;
-                background: #f5f5fa;
-                font-size: 3rem;
-                margin: 0;
-                padding: 0;
-                transition: background-color 0.3s ease;
+            font-size: 3rem;
 
             &:hover {
                 background-color: #45a049;
@@ -54,12 +45,12 @@
 
         // Dodaj style dla innych przycisków według potrzeb
         // ...
-
-        // Styl dla kontenera przycisków, jeśli jesteś zainteresowany
-        // &-container {
-        //     // Dodatkowe style dla kontenera
-        // }
     }
+
+    // Styl dla kontenera przycisków, jeśli jesteś zainteresowany
+    // &-container {
+    //     // Dodatkowe style dla kontenera
+    // }
 
     // Zastosuj ogólne style zdefiniowane w MainButton
     .main-button &-button {

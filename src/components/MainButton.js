@@ -24,7 +24,7 @@ function MainButton() {
       {resumeClicked ? (
         <AdditionalButtons onButtonClick={() => setResumeClicked(false)} />
       ) : (
-        <button className="button" onClick={handleButtonClick}>
+        <button className="button btn-wide" onClick={handleButtonClick}>
           RESUME
         </button>
       )}
