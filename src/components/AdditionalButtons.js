@@ -45,37 +45,44 @@ const AdditionalButtons = ({ onButtonClick }) => {
     setShowEducationModal(false);
   };
 
-  return (
-    <div className="additional-buttons">
-      <div className="additional-buttons-container">
-        {buttons.map((button) => (
-          <div key={button.id} className={`additional-button-container position-${button.id}`}>
-            {button.id === 5 ? (
-              <div
-                className={`button btn-wide`}
-                onClick={() => handleButtonClick(button.id)}
-              >
-                {button.label}
-              </div>
-            ) : (
-              <button
-                className={`additional-button additional-buttons-${button.label.toLowerCase()}`}
-                onClick={() => handleButtonClick(button.id)}
-              >
-                {button.label}
-              </button>
-            )}
-          </div>
-        ))}
-      </div>
-      {showModal && (
-        <Modal onClose={closeModal} />
-      )}
-      {showEducationModal && (
-        <EducationModal onClose={() => setShowEducationModal(false)} />
-      )}
+return (
+  <div className="additional-buttons">
+    <div className="additional-buttons-container">
+      {buttons.map((button) => (
+        <div key={button.id} className={`additional-button-container position-${button.id}`}>
+          {button.id === 1 ? (
+            <button
+              className={`additional-button additional-buttons-about position-1`}
+              onClick={() => handleButtonClick(button.id)}
+            >
+              {button.label}
+            </button>
+          ) : button.id === 5 ? (
+            <div
+              className={`button btn-wide`}
+              onClick={() => handleButtonClick(button.id)}
+            >
+              {button.label}
+            </div>
+          ) : (
+            <button
+              className={`additional-button additional-buttons-${button.label.toLowerCase()}`}
+              onClick={() => handleButtonClick(button.id)}
+            >
+              {button.label}
+            </button>
+          )}
+        </div>
+      ))}
     </div>
-  );
+    {showModal && (
+      <Modal onClose={closeModal} />
+    )}
+    {showEducationModal && (
+      <EducationModal onClose={() => setShowEducationModal(false)} />
+    )}
+  </div>
+);
 };
 
 export default AdditionalButtons;

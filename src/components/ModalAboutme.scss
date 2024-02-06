@@ -30,7 +30,7 @@
 .modal-header h2 {
     margin: 0;
     font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-        font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .modal-header h4 {
@@ -47,9 +47,7 @@
 .modal-body img {
     width: 100%;
     max-width: 200px;
-    /* ograniczenie szerokości do 600px */
     max-height: 300px;
-    /* ograniczenie wysokości do 400px */
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -60,4 +58,9 @@
 
 .modal-footer {
     margin-top: auto;
+}
+
+.btn-AboutMe {
+    height: 200px;
+    width: 300px;
 }

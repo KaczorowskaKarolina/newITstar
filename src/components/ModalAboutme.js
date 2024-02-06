@@ -32,7 +32,7 @@ I am characterized by diligence,
 conscientiousness, organizational skills,
 ability to work under stress.</p>
                   </div>
-                  <button onClick={onClose}>Back</button>
+                  <button className="btn-AboutMe" onClick={onClose}>Back</button>
         </div>
       </div>
     </div>

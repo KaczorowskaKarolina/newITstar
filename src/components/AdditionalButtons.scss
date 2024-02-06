@@ -1,13 +1,49 @@
 // AdditionalButtons.scss
+
 .additional-buttons {
     &-container {
+        margin: 25px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         justify-content: space-around;
         flex-wrap: wrap;
+        font-family: "Cascadia Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace";
     }
 
+    // Specjalny styl dla przycisku o id:1
+    .additional-button.additional-buttons-about.position-1 {
+        width: 200px;
+        height: 200px;
+        color: red;
+        background-color: #f5f5fa;
+        // box-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+        // transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 150px;
+        transition: background-color 0.3s ease;
+        box-shadow: -23px -23px 27px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
+        // box-shadow: (-3px -3px 7px #f5f5f5, 3px 3px 7px #bbc3cc);
+        &:hover {
+            background-color: #f5f5f5;
+            box-shadow: (-23px -23px 27px #f5f5f5, 3px 3px 7px #bbc3cc);
+            // box-shadow: 4px 4px 5px rgba(255, 0, 0, 0.5);
+        }
+        &:active {
+            box-shadow: -23px -23px 27px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
+        }
+    }
+
+    // Specjalny styl dla przycisku o id:1, gdy jest zawarty w .main-button
+    .main-button .additional-button.additional-buttons-about.position-1 {
+        background-color: #ddd;
+        color: red;
+
+        &:hover {
+            background-color: #eee;
+        }
+    }
+
+    // Pozostałe style dla przycisków
     &-button {
         width: 500px;
         font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -24,7 +60,6 @@
         }
 
         &-resume {
-            // Dodatkowe style dla przycisku RESUME
             width: 500px;
             height: 200px;
             font-size: 3rem;
@@ -35,7 +70,6 @@
         }
 
         &-about {
-            // Dodatkowe style dla przycisku About ME
             background-color: #2196f3;
             color: white;
 
@@ -43,17 +77,9 @@
                 background-color: #0d47a1;
             }
         }
-
-        // Dodaj style dla innych przycisków według potrzeb
-        // ...
     }
 
-    // Styl dla kontenera przycisków, jeśli jesteś zainteresowany
-    // &-container {
-    //     // Dodatkowe style dla kontenera
-    // }
-
-    // Zastosuj ogólne style zdefiniowane w MainButton
+    // Styl dla przycisków .main-button
     .main-button &-button {
         background: #f5f5fa;
         color: #2a1f62;
@@ -69,64 +95,5 @@
         &-about {
             background-color: #2196f3;
         }
-
-        // Dodaj style dla innych przycisków według potrzeb
-        // ...
     }
-
-    // Styl dla przycisku RESUME o id:5
-    // .additional-buttons-resume {
-    //     background-color: #f5f5fa;
-    //     color: #2a1f62;
-
-    //     &:hover {
-    //         background-color: #f8f8ff;
-    //     }
-    // }
-}
-
-// Dodaj poniższe style do pliku AdditionalButtons.scss
-
-.education-modal {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    max-width: 500px;
-    margin: 50px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-
-    h2 {
-        color: #2a1f62;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-
-    // Dodaj styl dla informacji o edukacji, np. listy
-
-    // .education-info {
-    //     list-style: none;
-    //     padding: 0;
-    //     margin: 0;
-
-    //     li {
-    //         margin-bottom: 10px;
-    //         font-size: 1.2rem;
-    //         color: #333;
-    //     }
-    // }
-
-    // .back-button {
-    //     background-color: #2a1f62;
-    //     color: #fff;
-    //     border: none;
-    //     padding: 10px 20px;
-    //     font-size: 1.5rem;
-    //     cursor: pointer;
-    //     margin-top: 20px;
-
-    //     &:hover {
-    //         background-color: #1a103a;
-    //     }
-    // }
 }
