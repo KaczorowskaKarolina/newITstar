@@ -8,7 +8,6 @@ import './MainButton.scss';
 
 function MainButton() {
   const dispatch = useDispatch();
-
   const [resumeClicked, setResumeClicked] = useState(false);
 
   const handleButtonClick = () => {
@@ -24,8 +23,8 @@ function MainButton() {
       {resumeClicked ? (
         <AdditionalButtons onButtonClick={() => setResumeClicked(false)} />
       ) : (
-        <button className="button btn-wide" onClick={handleButtonClick}>
-          RESUME
+        <button className="button-welcome noselect" onClick={handleButtonClick}>
+          WELCOME
         </button>
       )}
     </div>

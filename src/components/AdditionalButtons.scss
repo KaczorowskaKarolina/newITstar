@@ -1,99 +1,131 @@
-// AdditionalButtons.scss
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Zablokowanie przewijania strony */
+}
 
 .additional-buttons {
-    &-container {
-        margin: 25px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        font-family: "Cascadia Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.additional-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+}
+
+.additional-button-container {
+    position: absolute;
+    width: 120px;
+    /* Zwiększenie szerokości */
+    height: 120px;
+    /* Zwiększenie wysokości */
+}
+
+.additional-button-container.position-1 {
+    transform: rotate(0deg) translate(250px) rotate(0deg);
+    /* Zwiększenie odległości między przyciskami */
+}
+
+.additional-button-container.position-2 {
+    transform: rotate(45deg) translate(250px) rotate(-45deg);
+    /* Zwiększenie odległości między przyciskami */
+}
+
+.additional-button-container.position-3 {
+    transform: rotate(90deg) translate(250px) rotate(-90deg);
+    /* Zwiększenie odległości między przyciskami */
+}
+
+.additional-button-container.position-4 {
+    transform: rotate(135deg) translate(250px) rotate(-135deg);
+    /* Zwiększenie odległości między przyciskami */
+}
+
+.additional-button-container.position-6 {
+    transform: rotate(180deg) translate(250px) rotate(-180deg);
+    /* Zwiększenie odległości między przyciskami */
+}
+
+.additional-button-container.position-7 {
+    transform: rotate(225deg) translate(250px) rotate(-225deg);
+    /* Zwiększenie odległości między przyciskami */
+}
+
+.additional-button-container.position-8 {
+    transform: rotate(270deg) translate(250px) rotate(-270deg);
+    /* Zwiększenie odległości między przyciskami */
+}
+
+.additional-button-container.position-9 {
+    transform: rotate(315deg) translate(250px) rotate(-315deg);
+    /* Zwiększenie odległości między przyciskami */
+}
+
+.additional-button {
+    font-family: "Cascadia Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace";
+    text-shadow: 0px 0px 10px #343333;
+    width: 120px;
+    /* Zwiększenie szerokości */
+    height: 120px;
+    /* Zwiększenie wysokości */
+    cursor: pointer;
+    background: #d6bdf1;
+    border: none;
+    border-radius: 20px;
+    box-shadow: -10px -10px 20px #caa6ee, 10px 10px 20px #af88dc, inset 10px 10px 15px #caa6ee, inset -10px -10px 15px #caa6ee;
+    color: #d6bdf1;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 120px;
+    /* Dopasowanie wysokości linii */
+    transition: all 0.3s ease;
+
+    /* Dodanie płynnych przejść */
+    &:hover {
+        transform: scale(1.2);
+        /* Powiększenie przycisku */
+        background: #ffb6c1;
+        /* Zmiana koloru tła na pastelowy róż */
+        color: #ffffff;
+        /* Zmiana koloru tekstu na biały */
+        box-shadow: -15px -15px 25px #e6c2d9, 15px 15px 25px #ffb6c1, inset 15px 15px 20px #ffb6c1, inset -15px -15px 20px #e6c2d9;
+        /* Dostosowanie cienia */
     }
 
-    // Specjalny styl dla przycisku o id:1
-    .additional-button.additional-buttons-about.position-1 {
-        width: 200px;
-        height: 200px;
-        color: red;
-        background-color: #f5f5fa;
-        // box-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
-        // transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        margin-left: 150px;
-        transition: background-color 0.3s ease;
-        box-shadow: -23px -23px 27px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
-        // box-shadow: (-3px -3px 7px #f5f5f5, 3px 3px 7px #bbc3cc);
-        &:hover {
-            background-color: #f5f5f5;
-            box-shadow: (-23px -23px 27px #f5f5f5, 3px 3px 7px #bbc3cc);
-            // box-shadow: 4px 4px 5px rgba(255, 0, 0, 0.5);
-        }
-        &:active {
-            box-shadow: -23px -23px 27px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
-        }
+    &:focus {
+        outline: none;
     }
+}
 
-    // Specjalny styl dla przycisku o id:1, gdy jest zawarty w .main-button
-    .main-button .additional-button.additional-buttons-about.position-1 {
-        background-color: #ddd;
-        color: red;
+.central-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
 
-        &:hover {
-            background-color: #eee;
-        }
-    }
-
-    // Pozostałe style dla przycisków
-    &-button {
-        width: 500px;
-        font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-        font-size: 1.5rem;
-        border: none;
-        color: #2a1f62;
-        background: #f5f5fa;
-        margin: 0;
-        padding: 0;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: #f0f0f0;
-        }
-
-        &-resume {
-            width: 500px;
-            height: 200px;
-            font-size: 3rem;
-
-            &:hover {
-                background-color: #45a049;
-            }
-        }
-
-        &-about {
-            background-color: #2196f3;
-            color: white;
-
-            &:hover {
-                background-color: #0d47a1;
-            }
-        }
-    }
-
-    // Styl dla przycisków .main-button
-    .main-button &-button {
-        background: #f5f5fa;
-        color: #2a1f62;
-
-        &:hover {
-            background-color: #f8f8ff;
-        }
-
-        &-resume {
-            background-color: #4caf50;
-        }
-
-        &-about {
-            background-color: #2196f3;
-        }
-    }
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }

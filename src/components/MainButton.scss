@@ -1,57 +1,41 @@
 // MainButton.scss
-
-@mixin button-common-properties {
-
-    font-family: "Cascadia Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace";
-    font-size: 1.5rem;
-    border: none;
-    color: #2a1f62;
-    background: #f5f5fa;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease;
-    box-shadow: (-23px -23px 27px #f5f5f5, 23px 23px 27px #bbc3cc);
-}
-
 .main-button {
     position: relative;
     display: inline-block;
+}
 
-    button {
-        @include button-common-properties;
-        // width: 300px;
-        // height: 200px;
-        font-size: 3rem;
-        
+.button-welcome {
+    font-family: "Cascadia Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace";
+    // color: #000000;
+    text-shadow: 0px 0px 10px #343333;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    background: #d6bdf1;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -10px -10px 20px #caa6ee, 10px 10px 20px #af88dc, inset 10px 10px 15px #caa6ee, inset -10px -10px 15px #caa6ee;
+    color: #d6bdf1;
+    font-size: 3rem;
 
-        &:active {
-            box-shadow: -23px -23px 27px #f5f5f5 inset, 23px 23px 27px #bbc3cc inset;
-            font-size: 3.5rem;
-            user-select: none;
+    &:hover {
+            box-shadow: -15px -15px 25px #caa6ee, 15px 15px 25px #af88dc, inset 15px 15px 20px #af88dc, inset -15px -15px 20px #caa6ee;
+            font-size: 3.15rem;
+            transition: 500ms;
         }
 
-        &:hover {
-            background-color: #f8f8ff;
+    &:focus {
+            outline: none;
         }
-    }
+}
 
-    .btn-wide {
-        @include button-common-properties;
-        // font-family: "Cascadia Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace";
-        width: 500px;
-        height: 200px;
-        margin: 10px;
-        border-radius: 3px;
-        font-size: 3rem;
-        color: #708090;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &.visible {
-        button {
-            width: 150px;
-        }
-    }
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
