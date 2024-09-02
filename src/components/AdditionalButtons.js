@@ -1,5 +1,6 @@
+//AdditionaButtons.js
 import React, { useState, useEffect } from 'react';
-import Modal from './ModalAboutme.js';
+import ModalAboutme from './ModalAboutme.js';
 import EducationModal from './EducationModal.js';
 
 import './AdditionalButtons.scss';
@@ -10,7 +11,7 @@ const AdditionalButtons = ({ onButtonClick }) => {
     { id: 2, label: 'Education' },
     { id: 3, label: 'Experience' },
     { id: 4, label: 'Projects' },
-    { id: 5, label: 'RESUME' },
+    { id: 5, label: 'BACK' },
     { id: 6, label: 'Recommends' },
     { id: 7, label: 'Contact' },
     { id: 8, label: 'Passion' },
@@ -59,7 +60,7 @@ const AdditionalButtons = ({ onButtonClick }) => {
         ))}
       </div>
       {showModal && (
-        <Modal onClose={closeModal} />
+        <ModalAboutme onClose={closeModal} />
       )}
       {showEducationModal && (
         <EducationModal onClose={() => setShowEducationModal(false)} />

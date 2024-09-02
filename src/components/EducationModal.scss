@@ -1,0 +1,86 @@
+.modal * {
+    font-family: "Quicksand", sans-serif;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tło za modalem */
+    backdrop-filter: blur(5px);
+    /* Rozmycie tła */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #eadff7;
+    border-radius: 8px;
+    padding: 10px;
+    width: 700px;
+    font-family: "Quicksand", sans-serif;
+    /* add this line to change the font family */
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Quicksand", sans-serif;
+    /* change the font family for the header */
+}
+
+.modal-body {
+    overflow: auto;
+    /* add this to clear the float */
+    text-align: justify;
+    max-height: 60vh;
+    overflow-y: auto;
+    font-family: "Quicksand", sans-serif;
+}
+
+.text-container {
+    overflow: auto;
+    /* add this to make the text wrap around the image */
+    padding-right: 20px;
+    /* add some padding around the text */
+    text-align: justify;
+    /* justify the text to make it wrap nicely */
+}
+
+.back-button {
+    // margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #af88dc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    // padding: 20px;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    /* change the font family for the button */
+}
+
+.back-button:hover {
+    background-color: #af88dc;
+    width: 100%;
+    height: 51px;
+    cursor: pointer;
+    background: #d6bdf1;
+    // margin: 20px;
+    border: none;
+    border-radius: 4px;
+    // box-shadow: -5px -5px 10px #caa6ee, 5px 5px 10px #af88dc, inset 5px 5px 7px #caa6ee, inset -5px -5px 7px #caa6ee;
+    color: #ffffff;
+    font-size: 1rem;
+
+    &:hover {
+        // box-shadow: -7px -7px 13px #caa6ee, 7px 7px 13px #af88dc, inset 7px 7px 10px #af88dc, inset -7px -7px 10px #caa6ee;
+        font-size: 1.15rem;
+        // transition: 500ms;
+    }
+}

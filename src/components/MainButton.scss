@@ -1,3 +1,4 @@
+
 // MainButton.scss
 .main-button {
     position: relative;
@@ -6,7 +7,6 @@
 
 .button-welcome {
     font-family: "Cascadia Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace";
-    // color: #000000;
     text-shadow: 0px 0px 10px #343333;
     width: 300px;
     height: 200px;
@@ -20,14 +20,14 @@
     font-size: 3rem;
 
     &:hover {
-            box-shadow: -15px -15px 25px #caa6ee, 15px 15px 25px #af88dc, inset 15px 15px 20px #af88dc, inset -15px -15px 20px #caa6ee;
-            font-size: 3.15rem;
-            transition: 500ms;
-        }
+        box-shadow: -15px -15px 25px #caa6ee, 15px 15px 25px #af88dc, inset 15px 15px 20px #af88dc, inset -15px -15px 20px #caa6ee;
+        font-size: 3.15rem;
+        transition: 500ms;
+    }
 
     &:focus {
-            outline: none;
-        }
+        outline: none;
+    }
 }
 
 .noselect {
@@ -38,4 +38,32 @@
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    -user-drag: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }

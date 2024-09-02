@@ -21,87 +21,72 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    /* Zwiększenie szerokości kontenera */
+    height: 500px;
+    /* Zwiększenie wysokości kontenera */
 }
 
 .additional-button-container {
     position: absolute;
     width: 120px;
-    /* Zwiększenie szerokości */
     height: 120px;
-    /* Zwiększenie wysokości */
 }
 
 .additional-button-container.position-1 {
-    transform: rotate(0deg) translate(250px) rotate(0deg);
-    /* Zwiększenie odległości między przyciskami */
+    transform: rotate(0deg) translate(300px) rotate(0deg);
+    /* Zwiększenie odległości od środka */
 }
 
 .additional-button-container.position-2 {
-    transform: rotate(45deg) translate(250px) rotate(-45deg);
-    /* Zwiększenie odległości między przyciskami */
+    transform: rotate(45deg) translate(300px) rotate(-45deg);
 }
 
 .additional-button-container.position-3 {
-    transform: rotate(90deg) translate(250px) rotate(-90deg);
-    /* Zwiększenie odległości między przyciskami */
+    transform: rotate(90deg) translate(300px) rotate(-90deg);
 }
 
 .additional-button-container.position-4 {
-    transform: rotate(135deg) translate(250px) rotate(-135deg);
-    /* Zwiększenie odległości między przyciskami */
+    transform: rotate(135deg) translate(300px) rotate(-135deg);
 }
 
 .additional-button-container.position-6 {
-    transform: rotate(180deg) translate(250px) rotate(-180deg);
-    /* Zwiększenie odległości między przyciskami */
+    transform: rotate(180deg) translate(300px) rotate(-180deg);
 }
 
 .additional-button-container.position-7 {
-    transform: rotate(225deg) translate(250px) rotate(-225deg);
-    /* Zwiększenie odległości między przyciskami */
+    transform: rotate(225deg) translate(300px) rotate(-225deg);
 }
 
 .additional-button-container.position-8 {
-    transform: rotate(270deg) translate(250px) rotate(-270deg);
-    /* Zwiększenie odległości między przyciskami */
+    transform: rotate(270deg) translate(300px) rotate(-270deg);
 }
 
 .additional-button-container.position-9 {
-    transform: rotate(315deg) translate(250px) rotate(-315deg);
-    /* Zwiększenie odległości między przyciskami */
+    transform: rotate(315deg) translate(300px) rotate(-315deg);
 }
 
 .additional-button {
     font-family: "Cascadia Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace";
     text-shadow: 0px 0px 10px #343333;
-    width: 120px;
-    /* Zwiększenie szerokości */
+    width: 180px;
     height: 120px;
-    /* Zwiększenie wysokości */
     cursor: pointer;
     background: #d6bdf1;
     border: none;
     border-radius: 20px;
     box-shadow: -10px -10px 20px #caa6ee, 10px 10px 20px #af88dc, inset 10px 10px 15px #caa6ee, inset -10px -10px 15px #caa6ee;
     color: #d6bdf1;
-    font-size: 1rem;
+    font-size: 1.8rem;
     text-align: center;
     line-height: 120px;
-    /* Dopasowanie wysokości linii */
     transition: all 0.3s ease;
 
-    /* Dodanie płynnych przejść */
     &:hover {
         transform: scale(1.2);
-        /* Powiększenie przycisku */
-        background: #ffb6c1;
-        /* Zmiana koloru tła na pastelowy róż */
+        background: #fad3d9;
         color: #ffffff;
-        /* Zmiana koloru tekstu na biały */
-        box-shadow: -15px -15px 25px #e6c2d9, 15px 15px 25px #ffb6c1, inset 15px 15px 20px #ffb6c1, inset -15px -15px 20px #e6c2d9;
-        /* Dostosowanie cienia */
+        box-shadow: -15px -15px 25px #e6c2d9, 15px 15px 25px #f1bec6, inset 15px 15px 20px #f1bec6, inset -15px -15px 20px #e6c2d9;
     }
 
     &:focus {
